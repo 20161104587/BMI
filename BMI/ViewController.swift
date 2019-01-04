@@ -9,12 +9,20 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    @IBOutlet weak var height: UITextField!
+    @IBOutlet weak var weight: UITextField!
+    
+    @IBOutlet weak var result: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
 
-
+    @IBAction func input(_ sender: Any) {
+        let bmi = Double(weight.text!)!/(Double(height.text!)!*Double(height.text!)!)
+        result.text = String(bmi)
+    }
+    
 }
 
