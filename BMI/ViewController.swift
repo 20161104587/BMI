@@ -19,10 +19,23 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
     }
 
+    
     @IBAction func input(_ sender: Any) {
+       
         let bmi = Double(weight.text!)!/(Double(height.text!)!*Double(height.text!)!)
+        
         result.text = String(bmi)
+        
     }
     
+    @IBAction func clear(_ sender: Any) {
+        
+        height.text = ""
+         
+        weight.text = ""
+        
+        result.text = ""
+        
+    }
 }
 
